@@ -1,0 +1,173 @@
+.admin-page {
+  padding: 20px 0;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-header h1 {
+  margin: 0;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+  background-color: var(--white);
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+}
+
+.table td:last-child {
+  min-width: 200px;
+  white-space: nowrap;
+}
+
+.table th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table tbody tr:hover {
+  background-color: var(--gray);
+}
+
+.btn-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 80px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn-sm i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.btn-sm:hover {
+  background-color: #3d8c40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-sm.btn-danger {
+  background-color: var(--error);
+}
+
+.btn-sm.btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+.form-section {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.form-col {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.image-preview {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+}
+
+/* Status badges */
+.status-badge, .payment-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.status-pending {
+  background-color: #ff9800;
+}
+
+.status-processing {
+  background-color: #2196f3;
+}
+
+.status-shipped {
+  background-color: #9c27b0;
+}
+
+.status-delivered {
+  background-color: #4caf50;
+}
+
+.status-cancelled {
+  background-color: #f44336;
+}
+
+.payment-pending {
+  background-color: #ff9800;
+}
+
+.payment-completed {
+  background-color: #4caf50;
+}
+
+.payment-failed {
+  background-color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-header button {
+    margin-top: 10px;
+  }
+}

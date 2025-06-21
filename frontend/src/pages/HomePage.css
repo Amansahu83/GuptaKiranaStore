@@ -1,0 +1,121 @@
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+  padding: 80px 0;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--dark-gray);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-filter button {
+  padding: 8px 15px;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-filter button.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.loading, .error, .no-products {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 18px;
+}
+
+.error {
+  color: var(--error);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 28px;
+  }
+  
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box {
+    margin-right: 0;
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
